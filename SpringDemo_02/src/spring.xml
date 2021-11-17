@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!--  This XML file is created -->
+	<bean class="com.cov.beans.Student" id="stud">
+
+		<property name="id" value="101"></property>
+		<property name="name" value="Animesh"></property>
+	</bean>
+
+	<bean class="com.cov.beans.Triangle" id="tri">
+		<property name="pointA" ref="pa" />
+		<property name="pointB">
+			<bean class="com.cov.beans.Point">
+				<property name="x" value="8" />
+				<property name="y" value="8" />
+			</bean>
+		</property>
+		<property name="pointC" ref="pc" />
+
+	</bean>
+
+	<bean class="com.cov.beans.Point" id="pa">
+		<property name="x" value="0" />
+		<property name="y" value="0" />
+	</bean>
+
+	<bean class="com.cov.beans.Point" id="pb">
+		<property name="x" value="0" />
+		<property name="y" value="10" />
+	</bean>
+
+	<bean class="com.cov.beans.Point" id="pc">
+		<property name="x" value="5" />
+		<property name="y" value="5" />
+	</bean>
+</beans>
