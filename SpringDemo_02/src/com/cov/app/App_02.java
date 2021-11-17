@@ -14,6 +14,7 @@ public class App_02 {
 		
 		Triangle triangle = (Triangle)ctxt.getBean("tri");
 		System.out.println(triangle.getPointA()+" "+triangle.getPointB()+" "+triangle.getPointC());
+		System.out.println("Hii");
 	}
 }
 			
